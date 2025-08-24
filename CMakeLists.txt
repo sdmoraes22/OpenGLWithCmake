@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.26.0)
+
 project(EstudoOpenGL VERSION 1.0.0)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
@@ -12,6 +13,6 @@ add_executable(EstudoOpenGL
 
 target_include_directories(EstudoOpenGL PRIVATE ${CMAKE_DEPENDENCIES_PATH}/glad/include)
 target_include_directories(EstudoOpenGL PRIVATE ${CMAKE_DEPENDENCIES_PATH}/GLFW/include)
+target_link_directories(EstudoOpenGL PRIVATE "${CMAKE_DEPENDENCIES_PATH}/GLFW/libs")
 
-
-
+target_link_libraries(EstudoOpenGL PRIVATE glfw3)
