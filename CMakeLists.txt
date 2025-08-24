@@ -1,10 +1,17 @@
 cmake_minimum_required(VERSION 3.26.0)
-project(cmake_test VERSION 1.0.0)
+project(EstudoOpenGL VERSION 1.0.0)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
+set(CMAKE_DEPENDENCIES_PATH ${CMAKE_CURRENT_SOURCE_DIR}/dependencies)
 
-add_executable(cmake_test 
+
+add_executable(EstudoOpenGL 
     src/main.cpp
+    ${CMAKE_DEPENDENCIES_PATH}/glad/src/glad.c
 )
 
-target_include_directories(cmake_test PRIVATE dependencies)
+target_include_directories(EstudoOpenGL PRIVATE ${CMAKE_DEPENDENCIES_PATH}/glad/include)
+target_include_directories(EstudoOpenGL PRIVATE ${CMAKE_DEPENDENCIES_PATH}/GLFW/include)
+
+
+
