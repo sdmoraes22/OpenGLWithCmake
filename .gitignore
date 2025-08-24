@@ -33,8 +33,6 @@ vcpkg_installed/
 *.o
 *.obj
 *.exe
-*.dll
-*.lib
 *.so
 *.a
 *.ilk
