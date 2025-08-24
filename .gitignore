@@ -1,0 +1,42 @@
+# Build directory
+build/
+bin/
+out/
+cmake-build-*/
+
+# CMake specific files
+CMakeCache.txt
+CMakeFiles/
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps/
+
+# IDE specific files (adjust based on your IDE)
+.vs/
+.idea/
+*.swp
+*.suo
+*.ntvs*
+*.sln
+*.vcxproj*
+*.vcxproj.filters
+
+# Operating system specific files
+.DS_Store
+Thumbs.db
+
+# Dependencies (if managed outside of source control, e.g., vcpkg)
+vcpkg_installed/
+
+# Other common temporary files
+*.o
+*.obj
+*.exe
+*.dll
+*.lib
+*.so
+*.a
+*.ilk
+*.pdb
+*.log
