@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.26.0)
 project(EstudoOpenGL VERSION 1.0.0)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
-set(CMAKE_THIRD_PARTY_PATH ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty)
+set(CMAKE_THIRD_PARTY_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../thirdparty)
 
 
 add_executable(EstudoOpenGL 
