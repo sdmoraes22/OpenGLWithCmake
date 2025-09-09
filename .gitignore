@@ -14,6 +14,7 @@ _deps/
 
 # IDE specific files (adjust based on your IDE)
 .vs/
+*.vscode/
 .idea/
 *.swp
 *.suo
@@ -37,4 +38,4 @@ vcpkg_installed/
 *.a
 *.ilk
 *.pdb
-*.log
+*.log*
