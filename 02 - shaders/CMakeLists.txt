@@ -7,10 +7,10 @@ set(CMAKE_TP_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../thirdparty)
 set(CMAKE_COMMON_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../common)
 set(SHADERS_DIR "${CMAKE_CURRENT_SOURCE_DIR}/shaders")
 
+add_library(glad_lib ${CMAKE_TP_PATH}/glad/src/glad.c)
 
 add_executable(Shaders
     src/main.cpp
-    ${CMAKE_THIRD_PARTY_PATH}/glad/src/glad.c
     ${CMAKE_COMMON_PATH}/shader_class.cpp
 )
 
@@ -28,4 +28,4 @@ target_include_directories(Shaders PRIVATE ${CMAKE_TP_PATH}/GLFW/include)
 target_include_directories(Shaders PRIVATE ${CMAKE_COMMON_PATH})
 target_link_directories(Shaders PRIVATE "${CMAKE_TP_PATH}/GLFW/libs")
 
-target_link_libraries(Shaders PRIVATE glfw3)
+target_link_libraries(Shaders PRIVATE glad_lib glfw3)
