@@ -3,7 +3,7 @@ build/
 bin/
 out/
 cmake-build-*/
-
+.cache
 # CMake specific files
 CMakeCache.txt
 CMakeFiles/
