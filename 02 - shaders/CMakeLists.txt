@@ -24,8 +24,9 @@ add_custom_command(
 )
 
 target_include_directories(Shaders PRIVATE ${CMAKE_TP_PATH}/glad/include)
+target_include_directories(glad_lib PRIVATE ${CMAKE_TP_PATH}/glad/include)
 target_include_directories(Shaders PRIVATE ${CMAKE_TP_PATH}/GLFW/include)
 target_include_directories(Shaders PRIVATE ${CMAKE_COMMON_PATH})
-target_link_directories(Shaders PRIVATE "${CMAKE_TP_PATH}/GLFW/libs")
+target_link_directories(Shaders PRIVATE ${CMAKE_TP_PATH}/GLFW/libs)
 
-target_link_libraries(Shaders PRIVATE glad_lib glfw3)
+target_link_libraries(Shaders PRIVATE glad_lib glfw)
