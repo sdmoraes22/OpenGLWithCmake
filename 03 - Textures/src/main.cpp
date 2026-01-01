@@ -106,6 +106,7 @@ int main() {
     glClear(GL_COLOR_BUFFER_BIT);
 
     ourShader.use();
+    glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, texture);
     glBindVertexArray(VAO);
     glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
